@@ -5,9 +5,10 @@ struct ContentView: View {
   var body: some View {
     NavigationStack {
       List(store.objects, id: \.objectID) { object in
-        NavigationLink(object.title) {
-          ObjectView(object: object)
-        }
+//        NavigationLink(object.title) {
+//          ObjectView(object: object)
+//        }
+        Link(object.title, destination: URL(string: object.objectURL)!)
       }
       .navigationTitle("The Met")
     }
