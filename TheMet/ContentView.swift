@@ -7,16 +7,27 @@ struct ContentView: View {
       List(store.objects, id: \.objectID) { object in
         if !object.isPublicDomain,
            let url = URL(string: object.objectURL) {
-          NavigationLink(destination: SafariView(url: url)) {
+          NavigationLink(value: url) {
             WebIndicatorView(title: object.title)
           }
+          .listRowBackground(Color.metBackground)
+          .foregroundColor(.white)
         } else {
-          NavigationLink(object.title) {
-            ObjectView(object: object)
+          NavigationLink(value: object) {
+            Text(object.title)
           }
+          .listRowBackground(Color.metForeground)
         }
       }
       .navigationTitle("The Met")
+      .navigationDestination(for: URL.self) { url in
+        SafariView(url: url)
+          .navigationBarTitleDisplayMode(.inline)
+          .ignoresSafeArea()
+      }
+      .navigationDestination(for: Object.self) { object in
+        ObjectView(object: object)
+      }
     }
   }
 }
