@@ -2,6 +2,9 @@ import SwiftUI
 
 struct ContentView: View {
   @StateObject private var store = TheMetStore()
+  @State private var query = "rhino"
+  @State private var showQueryField = false
+  
   var body: some View {
     NavigationStack {
       List(store.objects, id: \.objectID) { object in
@@ -20,6 +23,17 @@ struct ContentView: View {
         }
       }
       .navigationTitle("The Met")
+      .toolbar {
+        Button("Search the Met") {
+          query = ""
+          showQueryField = true
+        }
+        .foregroundColor(Color.metBackground)
+        .padding(.horizontal)
+        .background(
+          RoundedRectangle(cornerRadius: 8)
+            .stroke(Color.metBackground, lineWidth: 2))
+      }
       .navigationDestination(for: URL.self) { url in
         SafariView(url: url)
           .navigationBarTitleDisplayMode(.inline)
