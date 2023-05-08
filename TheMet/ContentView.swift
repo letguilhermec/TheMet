@@ -7,40 +7,50 @@ struct ContentView: View {
   
   var body: some View {
     NavigationStack {
-      List(store.objects, id: \.objectID) { object in
-        if !object.isPublicDomain,
-           let url = URL(string: object.objectURL) {
-          NavigationLink(value: url) {
-            WebIndicatorView(title: object.title)
+      VStack {
+        Text("You searched for '\(query)'")
+          .padding(5)
+          .background(Color.metForeground)
+          .cornerRadius(10)
+        List(store.objects, id: \.objectID) { object in
+          if !object.isPublicDomain,
+             let url = URL(string: object.objectURL) {
+            NavigationLink(value: url) {
+              WebIndicatorView(title: object.title)
+            }
+            .listRowBackground(Color.metBackground)
+            .foregroundColor(.white)
+          } else {
+            NavigationLink(value: object) {
+              Text(object.title)
+            }
+            .listRowBackground(Color.metForeground)
           }
-          .listRowBackground(Color.metBackground)
-          .foregroundColor(.white)
-        } else {
-          NavigationLink(value: object) {
-            Text(object.title)
+        }
+        .navigationTitle("The Met")
+        .toolbar {
+          Button("Search the Met") {
+            query = ""
+            showQueryField = true
           }
-          .listRowBackground(Color.metForeground)
+          .foregroundColor(Color.metBackground)
+          .padding(.horizontal)
+          .background(
+            RoundedRectangle(cornerRadius: 8)
+              .stroke(Color.metBackground, lineWidth: 2))
         }
-      }
-      .navigationTitle("The Met")
-      .toolbar {
-        Button("Search the Met") {
-          query = ""
-          showQueryField = true
+        .alert("Search the Met", isPresented: $showQueryField) {
+          TextField("Search the Met", text: $query)
+          Button("Search") { }
         }
-        .foregroundColor(Color.metBackground)
-        .padding(.horizontal)
-        .background(
-          RoundedRectangle(cornerRadius: 8)
-            .stroke(Color.metBackground, lineWidth: 2))
+        .navigationDestination(for: URL.self) { url in
+          SafariView(url: url)
+            .navigationBarTitleDisplayMode(.inline)
+            .ignoresSafeArea()
+        }
+        .navigationDestination(for: Object.self) { object in
+          ObjectView(object: object)
       }
-      .navigationDestination(for: URL.self) { url in
-        SafariView(url: url)
-          .navigationBarTitleDisplayMode(.inline)
-          .ignoresSafeArea()
-      }
-      .navigationDestination(for: Object.self) { object in
-        ObjectView(object: object)
       }
     }
   }
