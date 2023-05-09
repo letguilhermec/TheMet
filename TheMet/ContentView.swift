@@ -41,7 +41,14 @@ struct ContentView: View {
         }
         .alert("Search the Met", isPresented: $showQueryField) {
           TextField("Search the Met", text: $query)
-          Button("Search") { }
+          Button("Search") {
+            Task {
+              do {
+                store.objects = []
+                try await store.fetchObjects(for: query)
+              } catch {}
+            }
+          }
         }
         .navigationDestination(for: URL.self) { url in
           SafariView(url: url)
@@ -52,6 +59,11 @@ struct ContentView: View {
           ObjectView(object: object)
       }
       }
+    }
+    .task {
+      do {
+        try await store.fetchObjects(for: query)
+      } catch {}
     }
   }
 }
