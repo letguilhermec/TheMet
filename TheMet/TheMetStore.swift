@@ -14,7 +14,9 @@ class TheMetStore: ObservableObject {
       for (index, objectID) in objectIDs.objectIDs.enumerated()
       where index < maxIndex {
         if let object = try await service.getObject(from: objectID) {
-          objects.append(object)
+          await MainActor.run {
+            objects.append(object)
+          }
         }
       }
     }

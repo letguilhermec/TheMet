@@ -62,6 +62,9 @@ struct ContentView: View {
       }
       }
     }
+    .overlay {
+      if store.objects.isEmpty { ProgressView() }
+    }
     .task {
       do {
         try await store.fetchObjects(for: query)
