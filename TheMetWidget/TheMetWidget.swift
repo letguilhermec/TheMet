@@ -14,13 +14,12 @@ struct Provider: TimelineProvider {
   func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> ()) {
     var entries: [SimpleEntry] = []
     let currentDate = Date()
-    let interval = 3
     let objects = readObjects()
     
     for index in 0 ..< objects.count {
       let entryDate = Calendar.current.date(
-        byAdding: .second,
-        value: index * interval,
+        byAdding: .hour,
+        value: index,
         to: currentDate)!
       let entry = SimpleEntry(
         date: entryDate,
