@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
   @StateObject private var store = TheMetStore()
-  @State private var query = "rhino"
+  @State private var query = "persimmon"
   @State private var showQueryField = false
   @State private var fetchObjectsTask: Task<Void, Error>?
   

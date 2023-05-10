@@ -1,4 +1,13 @@
 import Foundation
+import WidgetKit
+
+extension FileManager {
+  static func sharedContainerURL() -> URL {
+    return FileManager.default.containerURL(
+      forSecurityApplicationGroupIdentifier:
+        "group.letguilhermecTheMet.TheMet.objects")!
+  }
+}
 
 class TheMetStore: ObservableObject {
   @Published var objects: [Object] = []
@@ -19,6 +28,7 @@ class TheMetStore: ObservableObject {
           }
         }
       }
+      WidgetCenter.shared.reloadTimelines(ofKind: "TheMetWidget")
     }
   }
 }
