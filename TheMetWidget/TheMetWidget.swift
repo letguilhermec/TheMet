@@ -2,9 +2,6 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-  let store = TheMetStore(6)
-  let query = "persimmon"
-  
   func placeholder(in context: Context) -> SimpleEntry {
     SimpleEntry(date: Date(), object: Object.sample(isPublicDomain: true))
   }
@@ -18,31 +15,38 @@ struct Provider: TimelineProvider {
     var entries: [SimpleEntry] = []
     let currentDate = Date()
     let interval = 3
+    let objects = readObjects()
     
-    Task {
-      do {
-        try await store.fetchObjects(for: query)
-      } catch {
-        store.objects = [
-          Object.sample(isPublicDomain: true),
-          Object.sample(isPublicDomain: false)
-        ]
-      }
-    }
-    
-    for index in 0 ..< store.objects.count {
+    for index in 0 ..< objects.count {
       let entryDate = Calendar.current.date(
         byAdding: .second,
         value: index * interval,
         to: currentDate)!
       let entry = SimpleEntry(
         date: entryDate,
-        object: store.objects[index])
+        object: objects[index])
       entries.append(entry)
     }
     
     let timeline = Timeline(entries: entries, policy: .atEnd)
     completion(timeline)
+  }
+  
+  func readObjects() -> [Object] {
+    var objects: [Object] = []
+    let archiveURL = FileManager.sharedContainerURL()
+      .appendingPathComponent("objects.json")
+    print(">>> \(archiveURL)")
+    
+    if let codeData = try? Data(contentsOf: archiveURL) {
+      do {
+        objects = try JSONDecoder()
+          .decode([Object].self, from: codeData)
+      } catch {
+        print("Error: Can't decode contents")
+      }
+    }
+    return objects
   }
 }
 
