@@ -134,16 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				B22C32062A0C139300496E7C /* TheMet.entitlements */,
-				B2895CCF2A0A7F16002669C3 /* URLComponentsExtension.swift */,
 				1839F4AF25190F2A00BB00F1 /* TheMetApp.swift */,
-				18D775C422AD944300AE281E /* ContentView.swift */,
-				CDDCFFC62939C83B0022CE9A /* ObjectView.swift */,
-				CDDCFFC22939C7A90022CE9A /* Object.swift */,
-				CDDCFFC02939C7930022CE9A /* TheMetStore.swift */,
-				B2895CD12A0A8014002669C3 /* TheMetService.swift */,
-				CDDCFFC82939C8500022CE9A /* SafariView.swift */,
-				CDDCFFC42939C8290022CE9A /* ColorExtension.swift */,
-				B22C32002A0C0C9000496E7C /* SupportingViews.swift */,
+				B22C32082A0C18B400496E7C /* Views */,
+				B22C32092A0C18CF00496E7C /* Model */,
+				B22C320A2A0C18DF00496E7C /* Networking */,
 				18D775C622AD944400AE281E /* Assets.xcassets */,
 				18D775DA22AD963800AE281E /* LaunchScreen.storyboard */,
 				18D775CE22AD944400AE281E /* Info.plist */,
@@ -158,6 +152,36 @@
 				18D775C922AD944400AE281E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B22C32082A0C18B400496E7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18D775C422AD944300AE281E /* ContentView.swift */,
+				CDDCFFC62939C83B0022CE9A /* ObjectView.swift */,
+				CDDCFFC82939C8500022CE9A /* SafariView.swift */,
+				B22C32002A0C0C9000496E7C /* SupportingViews.swift */,
+				CDDCFFC42939C8290022CE9A /* ColorExtension.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B22C32092A0C18CF00496E7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDDCFFC22939C7A90022CE9A /* Object.swift */,
+				CDDCFFC02939C7930022CE9A /* TheMetStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B22C320A2A0C18DF00496E7C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B2895CD12A0A8014002669C3 /* TheMetService.swift */,
+				B2895CCF2A0A7F16002669C3 /* URLComponentsExtension.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		B2895D162A0BEE25002669C3 /* Frameworks */ = {
