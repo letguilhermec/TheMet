@@ -16,6 +16,9 @@
 		B22C31FF2A0C0C3200496E7C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC42939C8290022CE9A /* ColorExtension.swift */; };
 		B22C32012A0C0C9000496E7C /* SupportingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22C32002A0C0C9000496E7C /* SupportingViews.swift */; };
 		B22C32022A0C0CEB00496E7C /* SupportingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22C32002A0C0C9000496E7C /* SupportingViews.swift */; };
+		B22C32032A0C109E00496E7C /* TheMetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC02939C7930022CE9A /* TheMetStore.swift */; };
+		B22C32042A0C10B500496E7C /* TheMetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895CD12A0A8014002669C3 /* TheMetService.swift */; };
+		B22C32052A0C10B900496E7C /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895CCF2A0A7F16002669C3 /* URLComponentsExtension.swift */; };
 		B2895CD02A0A7F16002669C3 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895CCF2A0A7F16002669C3 /* URLComponentsExtension.swift */; };
 		B2895CD22A0A8015002669C3 /* TheMetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895CD12A0A8014002669C3 /* TheMetService.swift */; };
 		B2895D182A0BEE25002669C3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2895D172A0BEE25002669C3 /* WidgetKit.framework */; };
@@ -319,9 +322,12 @@
 			files = (
 				B2895D1F2A0BEE25002669C3 /* TheMetWidget.swift in Sources */,
 				B22C32022A0C0CEB00496E7C /* SupportingViews.swift in Sources */,
+				B22C32052A0C10B900496E7C /* URLComponentsExtension.swift in Sources */,
 				B2895D2A2A0BF211002669C3 /* Object.swift in Sources */,
 				B2895D2C2A0C056D002669C3 /* WidgetView.swift in Sources */,
 				B2895D1D2A0BEE25002669C3 /* TheMetWidgetBundle.swift in Sources */,
+				B22C32032A0C109E00496E7C /* TheMetStore.swift in Sources */,
+				B22C32042A0C10B500496E7C /* TheMetService.swift in Sources */,
 				B22C31FF2A0C0C3200496E7C /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

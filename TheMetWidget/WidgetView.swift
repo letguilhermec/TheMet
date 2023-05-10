@@ -46,13 +46,13 @@ struct WidgetView_Previews: PreviewProvider {
         entry: SimpleEntry(
           date: Date(),
           object: Object.sample(isPublicDomain: true)))
-      .previewContext(WidgetPreviewContext(family: .systemSmall))
+      .previewContext(WidgetPreviewContext(family: .systemMedium))
       
       WidgetView(
         entry: SimpleEntry(
           date: Date(),
           object: Object.sample(isPublicDomain: false)))
-      .previewContext(WidgetPreviewContext(family: .systemSmall))
+      .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
   }
 }
