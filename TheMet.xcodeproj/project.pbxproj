@@ -20,6 +20,7 @@
 		B2895D1F2A0BEE25002669C3 /* TheMetWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895D1E2A0BEE25002669C3 /* TheMetWidget.swift */; };
 		B2895D212A0BEE27002669C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2895D202A0BEE27002669C3 /* Assets.xcassets */; };
 		B2895D252A0BEE27002669C3 /* TheMetWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B2895D152A0BEE25002669C3 /* TheMetWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B2895D2A2A0BF211002669C3 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC22939C7A90022CE9A /* Object.swift */; };
 		CDDCFFC12939C7930022CE9A /* TheMetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC02939C7930022CE9A /* TheMetStore.swift */; };
 		CDDCFFC32939C7A90022CE9A /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC22939C7A90022CE9A /* Object.swift */; };
 		CDDCFFC52939C8290022CE9A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC42939C8290022CE9A /* ColorExtension.swift */; };
@@ -306,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2895D1F2A0BEE25002669C3 /* TheMetWidget.swift in Sources */,
+				B2895D2A2A0BF211002669C3 /* Object.swift in Sources */,
 				B2895D1D2A0BEE25002669C3 /* TheMetWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,7 +457,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "TheMet/Preview\\ Content";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N4L46RJZFA;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TheMet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -463,7 +465,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.TheMet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letguilhermecTheMet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -477,7 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "TheMet/Preview\\ Content";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N4L46RJZFA;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TheMet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -485,7 +487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.TheMet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letguilhermecTheMet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,7 +502,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N4L46RJZFA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheMetWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TheMetWidget;
@@ -512,7 +514,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.TheMet.TheMetWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letguilhermecTheMet.TheMetWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -529,7 +531,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N4L46RJZFA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheMetWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TheMetWidget;
@@ -541,7 +543,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.TheMet.TheMetWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letguilhermecTheMet.TheMetWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
