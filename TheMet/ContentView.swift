@@ -5,9 +5,10 @@ struct ContentView: View {
   @State private var query = "persimmon"
   @State private var showQueryField = false
   @State private var fetchObjectsTask: Task<Void, Error>?
+  @State private var path = NavigationPath()
   
   var body: some View {
-    NavigationStack {
+    NavigationStack(path: $path) {
       VStack {
         Text("You searched for '\(query)'")
           .padding(5)
@@ -69,6 +70,19 @@ struct ContentView: View {
       do {
         try await store.fetchObjects(for: query)
       } catch {}
+    }
+    .onOpenURL { url in
+      if let id = url.host,
+         let object = store.objects.first(
+          where: { String($0.objectID) == id }) {
+        if object.isPublicDomain {
+          path.append(object)
+        } else {
+          if let url = URL(string: object.objectURL) {
+            path.append(url)
+          }
+        }
+      }
     }
   }
 }
