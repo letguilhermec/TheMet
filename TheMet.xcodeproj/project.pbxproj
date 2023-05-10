@@ -12,6 +12,10 @@
 		18D775C722AD944400AE281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
 		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
+		B22C31FE2A0C0C2A00496E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
+		B22C31FF2A0C0C3200496E7C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC42939C8290022CE9A /* ColorExtension.swift */; };
+		B22C32012A0C0C9000496E7C /* SupportingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22C32002A0C0C9000496E7C /* SupportingViews.swift */; };
+		B22C32022A0C0CEB00496E7C /* SupportingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22C32002A0C0C9000496E7C /* SupportingViews.swift */; };
 		B2895CD02A0A7F16002669C3 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895CCF2A0A7F16002669C3 /* URLComponentsExtension.swift */; };
 		B2895CD22A0A8015002669C3 /* TheMetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895CD12A0A8014002669C3 /* TheMetService.swift */; };
 		B2895D182A0BEE25002669C3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2895D172A0BEE25002669C3 /* WidgetKit.framework */; };
@@ -21,6 +25,7 @@
 		B2895D212A0BEE27002669C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2895D202A0BEE27002669C3 /* Assets.xcassets */; };
 		B2895D252A0BEE27002669C3 /* TheMetWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B2895D152A0BEE25002669C3 /* TheMetWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B2895D2A2A0BF211002669C3 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC22939C7A90022CE9A /* Object.swift */; };
+		B2895D2C2A0C056D002669C3 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895D2B2A0C056D002669C3 /* WidgetView.swift */; };
 		CDDCFFC12939C7930022CE9A /* TheMetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC02939C7930022CE9A /* TheMetStore.swift */; };
 		CDDCFFC32939C7A90022CE9A /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC22939C7A90022CE9A /* Object.swift */; };
 		CDDCFFC52939C8290022CE9A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC42939C8290022CE9A /* ColorExtension.swift */; };
@@ -60,6 +65,7 @@
 		18D775C922AD944400AE281E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B22C32002A0C0C9000496E7C /* SupportingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportingViews.swift; sourceTree = "<group>"; };
 		B2895CCF2A0A7F16002669C3 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
 		B2895CD12A0A8014002669C3 /* TheMetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMetService.swift; sourceTree = "<group>"; };
 		B2895D152A0BEE25002669C3 /* TheMetWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TheMetWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +75,7 @@
 		B2895D1E2A0BEE25002669C3 /* TheMetWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMetWidget.swift; sourceTree = "<group>"; };
 		B2895D202A0BEE27002669C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2895D222A0BEE27002669C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2895D2B2A0C056D002669C3 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		CDDCFFC02939C7930022CE9A /* TheMetStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheMetStore.swift; sourceTree = "<group>"; };
 		CDDCFFC22939C7A90022CE9A /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		CDDCFFC42939C8290022CE9A /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -129,6 +136,7 @@
 				B2895CD12A0A8014002669C3 /* TheMetService.swift */,
 				CDDCFFC82939C8500022CE9A /* SafariView.swift */,
 				CDDCFFC42939C8290022CE9A /* ColorExtension.swift */,
+				B22C32002A0C0C9000496E7C /* SupportingViews.swift */,
 				18D775C622AD944400AE281E /* Assets.xcassets */,
 				18D775DA22AD963800AE281E /* LaunchScreen.storyboard */,
 				18D775CE22AD944400AE281E /* Info.plist */,
@@ -159,6 +167,7 @@
 			children = (
 				B2895D1C2A0BEE25002669C3 /* TheMetWidgetBundle.swift */,
 				B2895D1E2A0BEE25002669C3 /* TheMetWidget.swift */,
+				B2895D2B2A0C056D002669C3 /* WidgetView.swift */,
 				B2895D202A0BEE27002669C3 /* Assets.xcassets */,
 				B2895D222A0BEE27002669C3 /* Info.plist */,
 			);
@@ -257,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22C31FE2A0C0C2A00496E7C /* Assets.xcassets in Resources */,
 				B2895D212A0BEE27002669C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +307,7 @@
 				CDDCFFC32939C7A90022CE9A /* Object.swift in Sources */,
 				1839F4B025190F2A00BB00F1 /* TheMetApp.swift in Sources */,
 				B2895CD22A0A8015002669C3 /* TheMetService.swift in Sources */,
+				B22C32012A0C0C9000496E7C /* SupportingViews.swift in Sources */,
 				CDDCFFC52939C8290022CE9A /* ColorExtension.swift in Sources */,
 				CDDCFFC92939C8500022CE9A /* SafariView.swift in Sources */,
 			);
@@ -307,8 +318,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2895D1F2A0BEE25002669C3 /* TheMetWidget.swift in Sources */,
+				B22C32022A0C0CEB00496E7C /* SupportingViews.swift in Sources */,
 				B2895D2A2A0BF211002669C3 /* Object.swift in Sources */,
+				B2895D2C2A0C056D002669C3 /* WidgetView.swift in Sources */,
 				B2895D1D2A0BEE25002669C3 /* TheMetWidgetBundle.swift in Sources */,
+				B22C31FF2A0C0C3200496E7C /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
